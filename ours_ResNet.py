@@ -363,7 +363,7 @@ Loss_Variance = np.var(Pre_Loss)
 
 
 #print("acc is %.6f "%(acc))
-print(f"{acc:.1f}%")
+print(f"{acc:.2f}%")
 print("160000traintime%.1f %s" % (computation_time(train)[0], computation_time(train)[1]))
 print("40000testtime%.1f %s" % (computation_time(test)[0], computation_time(test)[1]))
 
@@ -411,7 +411,7 @@ print(Gain_Mean)
 print(Loss_Mean)
 print(Loss_Variance)
 
-print(f"{acc:.1f}%")
+print(f"{acc:.2f}%")
 
 '''
 
