@@ -35,7 +35,7 @@ def GetIndexFrom(y_pre):
             return matrix[i, 1], matrix[i, 2], matrix[i, 3], matrix[i, 4]
 
 
-#a = 10
+#a = 1
 a=100
 Nt = 2
 P_t =0.01
@@ -46,11 +46,11 @@ N_r =2
 P_cr =0.0625
 P_sync = 0.050
 B_W = 10000000
-dataset = pd.read_csv(r'/home/wwj/chenqiliang/SVD/All-channel_matrix_p_20.csv').iloc[:, 1:]
+dataset = pd.read_csv(r'/home/wwj/chenqiliang/SVD/All-channel_matrix_p_1.csv').iloc[:, 1:]
 
 dataset = np.asarray(dataset, np.float32)
 dataset = dataset.reshape(dataset.shape[0], 8, 8, 1)
-label = pd.read_csv(r'/home/wwj/chenqiliang/SVD/gain_labels_p_20.csv').iloc[:, 1]
+label = pd.read_csv(r'/home/wwj/chenqiliang/SVD/capacity_labels_p_1.csv').iloc[:, 1]
 label = np.asarray(label, np.int32)
 label.astype(np.int32)
 
@@ -534,7 +534,7 @@ Loss_Variance = np.var(Pre_Loss)
 
 
 
-print("SNR=20")
+
 print(f"{acc:.2f}%")
 
 print("160000traintime%.2f %s" % (computation_time(train)[0], computation_time(train)[1]))
@@ -582,9 +582,7 @@ Loss_Mean = np.mean(Loss)
 Loss_Variance = np.var(Loss)
 
 
-print("SNR=20")
-print("160000traintime167.2s")
-print("40000testtime86.5ms")
+
 
 print("160000traintime%.1f %s" % (computation_time(train)[0], computation_time(train)[1]))
 print("40000testtime%.1f %s" % (computation_time(test)[0], computation_time(test)[1]))
