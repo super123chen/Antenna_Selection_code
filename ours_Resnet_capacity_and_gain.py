@@ -174,7 +174,7 @@ class Resnet(nn.Module):
             Conv2d(in_channels=1, out_channels=64, kernel_size=(3, 3), stride=1, padding=1),
             BatchNorm2d(64),
             Shadow(64),
-            ReLU(),
+            #ReLU(),
             
         )
         
